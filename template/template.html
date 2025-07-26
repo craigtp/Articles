@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{title}}</title>
+  <style>
+    :root {
+      --bg-color-light: #ffffff;
+      --text-color-light: #24292e;
+      --bg-color-dark: #0d1117;
+      --text-color-dark: #c9d1d9;
+      --code-bg-light: rgba(27, 31, 35, 0.05);
+      --code-bg-dark: #161b22;
+      --border-color-light: #dfe2e5;
+      --border-color-dark: #30363d;
+      --link-color-light: #0366d6;
+      --link-color-dark: #58a6ff;
+    }
+
+    html[data-theme='light'] {
+      --bg-color: var(--bg-color-light);
+      --text-color: var(--text-color-light);
+      --code-bg: var(--code-bg-light);
+      --border-color: var(--border-color-light);
+      --link-color: var(--link-color-light);
+    }
+
+    html[data-theme='dark'] {
+      --bg-color: var(--bg-color-dark);
+      --text-color: var(--text-color-dark);
+      --code-bg: var(--code-bg-dark);
+      --border-color: var(--border-color-dark);
+      --link-color: var(--link-color-dark);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+      padding: 2rem;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: .3em;
+      margin-top: 1em;
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.25em; }
+    h4 { font-size: 1em; }
+    h5 { font-size: 0.875em; }
+    h6 { font-size: 0.85em; color: #6a737d; }
+
+    p { margin-bottom: 1em; }
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    code {
+      background-color: var(--code-bg);
+      padding: .2em .4em;
+      font-size: 85%;
+      border-radius: 3px;
+      font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    }
+
+    pre {
+      background-color: var(--code-bg);
+      padding: 16px;
+      overflow: auto;
+      font-size: 85%;
+      line-height: 1.45;
+      border-radius: 6px;
+    }
+
+    pre code {
+      background: none;
+      padding: 0;
+    }
+
+    blockquote {
+      padding: 0 1em;
+      color: #6a737d;
+      border-left: .25em solid var(--border-color);
+      margin: 0 0 1em;
+    }
+
+    ul, ol {
+      padding-left: 2em;
+      margin-bottom: 1em;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 1em;
+    }
+
+    table th, table td {
+      border: 1px solid var(--border-color);
+      padding: 6px 13px;
+    }
+
+    table th {
+      background-color: var(--code-bg);
+      font-weight: 600;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: var(--border-color);
+      margin: 24px 0;
+    }
+
+    strong { font-weight: 600; }
+
+    /* Toggle Button */
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-color);
+      transition: color 0.3s;
+    }
+	
+	article {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">🌙</button>
+
+  <article>
+    {{body}}
+  </article>
+
+  <script>
+    // Initial theme detection
+    const userPref = localStorage.getItem('theme');
+    const systemPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const theme = userPref || systemPref;
+
+    document.documentElement.setAttribute('data-theme', theme);
+    const toggle = document.getElementById('themeToggle');
+    toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+
+    toggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      toggle.textContent = next === 'dark' ? '☀️' : '🌙';
+      localStorage.setItem('theme', next);
+    });
+  </script>
+</body>
+</html>
