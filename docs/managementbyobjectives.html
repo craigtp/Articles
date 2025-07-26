@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Management By Objectives Considered Harmful?</title>
+  <style>
+    :root {
+      --bg-color-light: #ffffff;
+      --text-color-light: #24292e;
+      --bg-color-dark: #0d1117;
+      --text-color-dark: #c9d1d9;
+      --code-bg-light: rgba(27, 31, 35, 0.05);
+      --code-bg-dark: #161b22;
+      --border-color-light: #dfe2e5;
+      --border-color-dark: #30363d;
+      --link-color-light: #0366d6;
+      --link-color-dark: #58a6ff;
+    }
+
+    html[data-theme='light'] {
+      --bg-color: var(--bg-color-light);
+      --text-color: var(--text-color-light);
+      --code-bg: var(--code-bg-light);
+      --border-color: var(--border-color-light);
+      --link-color: var(--link-color-light);
+    }
+
+    html[data-theme='dark'] {
+      --bg-color: var(--bg-color-dark);
+      --text-color: var(--text-color-dark);
+      --code-bg: var(--code-bg-dark);
+      --border-color: var(--border-color-dark);
+      --link-color: var(--link-color-dark);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+      padding: 2rem;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: .3em;
+      margin-top: 1em;
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.25em; }
+    h4 { font-size: 1em; }
+    h5 { font-size: 0.875em; }
+    h6 { font-size: 0.85em; color: #6a737d; }
+
+    p { margin-bottom: 1em; }
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    code {
+      background-color: var(--code-bg);
+      padding: .2em .4em;
+      font-size: 85%;
+      border-radius: 3px;
+      font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    }
+
+    pre {
+      background-color: var(--code-bg);
+      padding: 16px;
+      overflow: auto;
+      font-size: 85%;
+      line-height: 1.45;
+      border-radius: 6px;
+    }
+
+    pre code {
+      background: none;
+      padding: 0;
+    }
+
+    blockquote {
+      padding: 0 1em;
+      color: #6a737d;
+      border-left: .25em solid var(--border-color);
+      margin: 0 0 1em;
+    }
+
+    ul, ol {
+      padding-left: 2em;
+      margin-bottom: 1em;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 1em;
+    }
+
+    table th, table td {
+      border: 1px solid var(--border-color);
+      padding: 6px 13px;
+    }
+
+    table th {
+      background-color: var(--code-bg);
+      font-weight: 600;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: var(--border-color);
+      margin: 24px 0;
+    }
+
+    strong { font-weight: 600; }
+
+    /* Toggle Button */
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-color);
+      transition: color 0.3s;
+    }
+	
+	article {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">🌙</button>
+
+  <article>
+    <h1>Management By Objectives Considered Harmful?</h1>
+<p>This article presents a range of evidence, research and study that asserts, with sound scientific basis, that employee objective based performance reviews and rewards schemes, do not work as intended.  Worse, the evidence shows that very often these schemes can actually produce the opposite of the desired effect.</p>
+<p>Starting with an excerpt from the seminal software project management book, &quot;<a href="http://www.amazon.co.uk/Peopleware-Productive-Projects-Teams-2nd/dp/0932633439">Peopleware</a>&quot;, by Tom DeMarco and Timothy Lister, we look at some theories around teams and team-building.  The authors posit that effective and productive teams are build far more around sociological and personal interactions than technological capability.</p>
+<p>In the first edition of the book, DeMarco &amp; Lister write about a phenomenon which they called &quot;Teamicide&quot;.  Teamicide is a phrase invented by the authors that describes the very real phenomenon of a decline in team effectiveness, efficiency &amp; communication.  DeMarco and Lister define teamicide as <em>[techniques that] &quot;inhibit the formation of teams and disrupt project sociology&quot;</em>.  Teamicide is the very opposite of a team that is &quot;<a href="http://www.thefreedictionary.com/jelled">jelled</a>&quot;.</p>
+<p>DeMarco &amp; Lister write that it is almost impossible to cite the specific actions or management processes that will cause a team to &quot;jell&quot; and that attempting to force it is an exercise in futility, however, it is fairly easy to cite a number of actions or techniques that will almost certainly cause the opposite effect, that of &quot;teamicide&quot;:</p>
+<blockquote>
+<ul>
+<li>defensive management</li>
+<li>bureaucracy</li>
+<li>physical separation</li>
+<li>fragmentation of people's time</li>
+<li>quality reduction of the product</li>
+<li>phony deadlines</li>
+<li>clique control</li>
+</ul>
+</blockquote>
+<p>In the 2nd edition of &quot;<a href="http://www.amazon.co.uk/Peopleware-Productive-Projects-Teams-2nd/dp/0932633439">Peopleware</a>&quot;, the authors expand upon the concept of &quot;teamicide&quot; and cite further managerial action that can cause the phenomenon:</p>
+<blockquote>
+<h2>Teamicide Re-revisited</h2>
+<p>Internal competition has the direct effect of making coaching difficult or impossible.  Since coaching is essential to the workings of a healthy team, anything the manager does to increase competition within a team has to be viewed as teamicidal.</p>
+<p>Here are some of the managerial actions that tend to produce teamicidal side effects:</p>
+<ul>
+<li>annual salary or merit reviews</li>
+<li>management by objectives (MBO)</li>
+<li>praise of certain workers for extraordinary accomplishment</li>
+<li>awards, prizes, bonuses tied to performance</li>
+<li>performance measurement in almost any form</li>
+</ul>
+<p>But hold on here, aren't these the very things that managers spend much or even most of their time doing?  Sadly, yes.  And yet these actions are likely to be teamicidal.</p>
+<p>In his 1982 book &quot;Out of the Crisis&quot;, <a href="http://en.wikipedia.org/wiki/W._Edwards_Deming">W. Edwards Deming</a> set forth his now widely followed &quot;Fourteen Points.&quot; Hidden among them, almost as an afterthought, is point 12B:</p>
+<blockquote>
+<p>Remove barriers that rob people in management and in engineering of their right to pride of workmanship. This means [among other things] abolishment of the annual or merit rating and of management by objectives.</p>
+</blockquote>
+<p>Even people who think of themselves as Demingites have trouble with this one. They are left gasping, &quot;What the hell are we supposed to do instead?&quot; Deming's point is that MBO and its ilk are managerial cop-outs. By using simplistic extrinsic motivators to goad performance, managers excuse themselves from harder matters such as investment, direct personal motivation, thoughtful team-formation, staff retention, and ongoing analysis and redesign of work procedures.
+Our point here is somewhat more limited: Any action that rewards team members differentially is likely to foster competition. Managers need to take steps to decrease or counteract this effect.</p>
+</blockquote>
+<p>The authors of Peopleware cite <a href="http://en.wikipedia.org/wiki/W._Edwards_Deming">W. Edwards Deming</a> who was a leading management thinker, statistician, professor, author, lecturer and consultant. He is best known for his &quot;Plan-Do-Check-Act&quot; cycle popularly named after him. In Japan, from 1950 onwards, he taught top management how to improve design (and thus service), product quality, testing, and sales through various methods.  He is popularly credited with inventing the technique of <a href="http://en.wikipedia.org/wiki/Lean_manufacturing">&quot;lean manufacturing/production&quot;</a>.</p>
+<p>Indeed, as part of his management teachings, Deming was a <a href="http://en.wikipedia.org/wiki/Management_by_objectives#Arguments_against">leading opponent of the Management By Objectives technique</a>, stating that:</p>
+<blockquote>
+<p>&quot;setting production targets will encourage resources to meet those targets through whatever means necessary, which usually results in poor quality&quot;</p>
+</blockquote>
+<p><a href="http://www.leanessays.com/2004/08/team-compensation.html">In an article</a> written for Better Software magazine, <a href="http://www.poppendieck.com/people.htm">Mary Poppendieck</a>, a lean software consultant and author of &quot;Lean Software Development&quot;, &quot;Implementing Lean Software Development&quot; and &quot;Leading Lean Software Development&quot;, writes about Team Compensation.  She, too, quotes leading management thinker <a href="http://en.wikipedia.org/wiki/W._Edwards_Deming">W. Edwards Deming</a> but asks if his theories are not bound specifically to manufacturing.  In turns out that many of Deming's theories about worker motivation remain true irrespective of the worker's field.  Poppendieck writes about the numerous dysfunctions that occur due to ill-advised motivation techniques.  When writing about the dyfunction of Competition, she writes:</p>
+<blockquote>
+<p>Evaluation systems which rank people for purposes of merit raises pit individual employees against each other and strongly discourage collaboration.</p>
+</blockquote>
+<p>Poppendieck writes about employee perceptions of unfairness and impossibility, which can also destroy team morale and damage team efficiency:</p>
+<blockquote>
+<p>There is no greater de-motivator than a reward system which is perceived to be unfair. It doesn't matter if the system is fair or not, if there is a perception of unfairness, then those who think that they have been treated unfairly will rapidly loose their motivation.</p>
+</blockquote>
+<p>She continues examining dysfunctions by looking at sub-optimizations, which is the narrow focus of measuring and evaluating only a small number of factors that account for an individual or teams overall effort and concludes that:</p>
+<blockquote>
+<p>When we optimize a part of a chain, we invariably sub-optimize overall performance.</p>
+</blockquote>
+<p>Poppendieck concludes her examination of dysfunctions with a look at the destruction of intrinsic motivation.  This is the motivation which comes from a pride in one's work and of a &quot;job well done&quot; rather than a monetary or other financial incentive:</p>
+<blockquote>
+<p>Once employees get used to receiving financial rewards for meeting goals, they begin to work for the rewards, not the intrinsic motivation that comes from doing a good job and helping their company be successful. Many studies have shown that extrinsic rewards like grades and pay will, over time, destroy the intrinsic reward that comes from the work itself.</p>
+</blockquote>
+<p>Ultimately, Poppendieck concludes that it is far better to simply &quot;find better motivators than money&quot;:</p>
+<blockquote>
+<p>While monetary rewards can be a powerful driver of behavior, the motivation they provide is not sustainable. Once people have an adequate income, motivation comes from things such as achievement, growth, control over one's work, recognition, advancement, and a friendly working environment.</p>
+</blockquote>
+<p>The notion of better motivations than monetary or financial reward, and that of &quot;Intrinsic Motivation&quot; is a common theme from author and speaker <a href="http://en.wikipedia.org/wiki/Daniel_H._Pink">Daniel H. Pink</a>.  In his book, &quot;<a href="http://www.amazon.co.uk/Drive-Surprising-Truth-About-Motivates/dp/184767769X/">Drive: The surprising truth about what motivates us</a>&quot;, he writes:</p>
+<blockquote>
+<p>Too many organizations—not just companies, but governments and non-profits as well—still operate from assumptions about human potential and individual performance that are outdated, unexamined, and rooted more in folklore than in science. They continue to pursue practices such as short-term incentive plans and pay-for-performance schemes in the face of mounting evidence that such measures usually don't work and often do harm.</p>
+</blockquote>
+<p>Within the book, Daniel H. Pink cites the scientific research and study performed by numerous psychologists, sociologists and economists from world-leading organisations such as the <a href="http://www.mit.edu">Massachusetts Institute of Technology (MIT)</a> and the <a href="http://en.wikipedia.org/wiki/Federal_Reserve_Bank">Federal Reserve Bank</a> in America that finds that performance-based rewards programmes only ever seem to work for simple, by-the-route tasks.  For tasks requiring even rudimentary cognitive skills, such as those performed by virtually all white-collar office workers today, performance-based rewards simply do not work, and can actually decrease performance and productivity rather than increase it:</p>
+<blockquote>
+<p>As long as the task involved only mechanical skill, bonuses worked as they would be expected, the higher the pay the better their performance. But once the task called for even rudimentary cognitive skill a larger reward led to poorer performance.
+(<a href="https://web.archive.org/web/20170831024440/https://www.thersa.org/globalassets/pdfs/blogs/rsa-lecture-dan-pink-transcript.pdf"><em>RSA Lecture</em></a>)</p>
+</blockquote>
+<p>Further, the most motivating factor for tasks involving cognitive skills is that of &quot;intrinsic motivation&quot;.  Pink cites the business models around the production of Microsoft's Encarta encyclopaedia, which involved employing many hundreds of paid professionals to write the articles for the encyclopaedia, versus the business model of <a href="http://en.wikipedia.org/wiki/Main_Page">Wikipedia</a>, a collaboratively edited encyclopaedia maintained by contributors that receive no reward for their work other that the intrinsic satisfaction of a &quot;job well done&quot;.</p>
+<p>Pink's conclusions are that this intrinsic motivation comes in the form of three factors within the employee's working environment that, taken together, result in an intrinsic motivation:</p>
+<ul>
+<li><strong>Autonomy</strong> – The ability to direct the course of one's own life – the work that is performed.</li>
+<li><strong>Mastery</strong> – The overarching desire for people to improve themselves, gain experience and get better at what they enjoy.</li>
+<li><strong>Purpose</strong> – The reasons you do what you do. Doing tasks merely for money and profit is not too motivating, but doing tasks to make someone's life better, to make the world better, to have a well defined purpose to your work and to make money – now that is motivating.</li>
+</ul>
+<p>Daniel H. Pink has lectured on his work around motivation and drive at many events and videos are available of his lectures at <a href="http://www.ted.com/talks/dan_pink_on_motivation.html">TED Oxford</a>, <a href="https://www.youtube.com/watch?v=_mG-hhWL_ug">Royal Society for the encouragement of Arts, Manufactures &amp; Commerce</a> (<a href="https://www.youtube.com/watch?v=u6XAPnuFjJc">Animated version</a>) and <a href="http://www.youtube.com/watch?v=sL3wF2gHYqg">American Psychological Association</a>. A written summary of Dan Pink's work on motivation and drive can be found <a href="https://web.archive.org/web/20150911200416/https://checkside.wordpress.com/2012/01/20/motivation-revamped-a-summary-of-daniel-h-pinks-new-theory-of-what-motivates-us/">here</a>.</p>
+<p>Todd Grubb, an associate professor in Business at Troy University, while writing for the Journal of Human Resources Education, presents a white-paper entitled <a href="https://web.archive.org/web/20120813034904/http://scob.troy.edu:80/JHRE/Articles/PDF/1-1/1.pdf">Performance Appraisal Reappraised:  It's Not All Positive</a> that examines performance appraisals:</p>
+<blockquote>
+<p>Performance appraisal is a widespread, very expensive, counter-productive exercise.  It is typically conducted with good intentions to manage and improve the  performance of individual employees, and lead to enhanced overall organizational efficiency, effectiveness, and productivity.  Unfortunately it is an exercise in futility.</p>
+</blockquote>
+<p>Grubb reminds us that performance <em>appraisal</em> and performance <em>management</em> whilst related, are actually very different concepts:</p>
+<blockquote>
+<p>Performance appraisal and performance management are different.  Performance management is the creation of an entire system (a setting, a work environment, a culture) bringing together all of the essential factors so all of the people are enabled to work in an aligned and coordinated manner to the best of their abilities.  Performance appraisal is much more limited.  It is a process to assess how individual employees are performing and how they can improve their job performance and contribute to overall organizational performance.</p>
+</blockquote>
+<p>He goes on to posit that performance appraisals typically fall far short of their believed ability to ensure overall performance of the organisation:</p>
+<blockquote>
+<p>Some perceive that performance appraisal typically directs focus on the wrong things, at the wrong time, in the wrong way and as a result serves to increase costs and lower organizational efficiency and productivity.</p>
+</blockquote>
+<blockquote>
+<p>The wrong things are: &quot;performance pay&quot; based on individual performance rating, rather than group coordination and organizational productivity (Kerr, 1995; Kohn, 1993); individual weaknesses, rather than the net combination of an individual's strengths and contributions to the team and organization (Buckingham, 2005).</p>
+</blockquote>
+<blockquote>
+<p>The wrong time is at scheduled periodic intervals (e.g. anniversary date), rather than on-going and at project completion (Lee, 2006).</p>
+</blockquote>
+<blockquote>
+<p>The wrong way is supervisory judgment using a standard form and criteria, rather than mutual involvement with the employee and coaching for improved performance and contribution (Lee, 2006).</p>
+</blockquote>
+<p>Grubb's white-paper cites the renowned author and lecturer, <a href="http://en.wikipedia.org/wiki/Alfie_Kohn">Alfie Kohn</a>, who wrote the influential article, <a href="https://web.archive.org/web/20130124100329/http://carmine.se.edu:80/cvonbergen/incentives.pdf">&quot;Why Incentive Plans Cannot Work&quot;</a> and who is a leading proponent of the belief that external (or extrinsic) motivators do not work as well as intrinsic ones:</p>
+<blockquote>
+<p>Additionally, performance appraisal presumes a behavioralist view of extrinsic motivation, i.e., that people will improve to attain rewards.  Further, it is based on the assumption that if you merely tell  employees what they are doing wrong, they can and will want to correct their performance in order to receive more money, recognition or a promotion.  It accepts the idea that people want to be bribed and held hostage.  It ignores the impact of intrinsic motivation—the idea that people ultimately want to feel good about themselves; they want to learn, grow, and master their craft, which generally also means earning the respect of their peers (Herzberg, 1968).  Extrinsic motivation generated through performance pay can decrease the intrinsic motivation from, and interest in, doing the job itself (James, 2003).</p>
+</blockquote>
+<blockquote>
+<p>In his article, &quot;Why Incentive Plans Cannot Work,&quot; Alfie Kohn points out that &quot;Incentives, a version of what psychologists  call extrinsic motivators, do not alter the attitudes that underlie our behaviors.  They do not create an enduring commitment to any value or action.  Rather, incentives merely—and temporarily—change what we do&quot; (1993).  He goes on to say that studies show that people who expect to receive no reward perform better than those who do.  Rewards buy only temporary compliance, not commitment.</p>
+</blockquote>
+<p><a href="http://en.wikipedia.org/wiki/Joel_Spolsky">Joel Spolsky</a>, CEO of <a href="http://www.fogcreek.com/">Fog Creek Software</a> &amp; <a href="http://stackexchange.com/">StackExchange</a> and author of the popular JoelOnSoftware blog is also scathing when he writes about &quot;<a href="http://www.joelonsoftware.com/articles/fog0000000070.html">incentive pay considered harmful</a>&quot;:</p>
+<blockquote>
+<p>On teams where performance reviews are done honestly, they tend to result in a week or so of depressed morale, moping, and some resignations. They tend to drive wedges between team members, often because the poorly-rated are jealous of the highly-rated, in a process that DeMarco and Lister call teamicide: the inadvertent destruction of jelled teams.
+Alfie Kohn, in a now-classic Harvard Business Review article, wrote:</p>
+<blockquote>
+<p>... at least two dozen studies over the last three decades have conclusively shown that people who expect to receive a reward for completing a task or for doing that task successfully simply do not perform as well as those who expect no reward at all. [HBR Sept/Oct 93]</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>He concludes that &quot;incentives (or bribes) simply can't work in the workplace&quot;. DeMarco and Lister go further, stating unequivocally that any kind of workplace competition, any scheme of rewards and punishments, and even the old fashion trick of &quot;catching people doing something right and rewarding them,&quot; all do more harm than good. Giving somebody positive reinforcement (such as stupid company ceremonies where people get plaques) implies that they only did it for the lucite plaque; it implies that they are not independent enough to work unless they are going to get a cookie; and it's insulting and demeaning.<br />
+Most software managers have no choice but to go along with performance review systems that are already in place. If you're in this position, the only way to prevent teamicide is to simply give everyone on your team a gushing review. But if you do have any choice in the matter, I'd recommend that you run fleeing from any kind of performance review, incentive bonus, or stupid corporate employee-of-the-month program.</p>
+</blockquote>
+<p>Joel goes on to say, in <a href="http://www.joelonsoftware.com/news/20020715.html">another article from his JoelOnSoftware blog</a>, that:</p>
+<blockquote>
+<p>I've long claimed that incentive pay isn't such a hot idea, even if you could measure who was doing a good job and who wasn't, but Austin [<em><a href="https://web.archive.org/web/20111010225312/http://www.cutter.com:80/meet-our-experts/austinr.html">Dr. Robert D. Austin</a> - author, lecturer and Harvard professor in Business Administration</em>] reinforces this by showing that you can't even measure performance, so incentive pay is even less likely to work.</p>
+</blockquote>
+<p>He also directly addresses the notion of employees &quot;working to the measurement&quot; upon which incentives and pay are based, in an <a href="http://www.inc.com/magazine/20081001/how-hard-could-it-be-sins-of-commissions.html">article published in INC magazine</a>:</p>
+<blockquote>
+<p>But anyway, back to Austin, the Harvard professor. His point is that incentive plans based on measuring performance always backfire. Not sometimes. Always. What you measure is inevitably a proxy for the outcome you want, and even though you may think that all you have to do is tweak the incentives to boost sales, you can't. It's not going to work. Because people have brains and are endlessly creative when it comes to improving their personal well-being at everyone else's expense.</p>
+</blockquote>
+<blockquote>
+<p>As some of your workers substitute making the most of an incentive program for serving customers the best way they know how, the customer experience will suffer. Your best employees will find themselves fighting with incentive seekers to keep the business on track. Meanwhile, they will begin to lose faith in your judgment.</p>
+</blockquote>
+<p>Indeed, a few of the sites on the StackExchange network that are dedicated to programming and programmers (notably, the original <a href="http://stackoverflow.com/">StackOverflow</a> site and the <a href="http://programmers.stackexchange.com/">Programmers.stackexchange.com</a> sites) have hosted a number of questions and answers regarding objective based performance measurement and related managerial techniques.</p>
+<p>The commentators and answerers on these questions are people who are usually speaking from personal experience, and their general consensus also agrees with the formal research and study; That objective based managerial techniques, and least for software developers and programmers, doesn't work:</p>
+<p><a href="https://web.archive.org/web/20161211203619/http://softwareengineering.stackexchange.com:80/questions/28927/are-smart-goals-useful-for-programmers">Are SMART goals useful for programmers?</a></p>
+<p><a href="https://web.archive.org/web/20170215181521/https://stackoverflow.com/questions/324399/what-is-a-fair-productivity-measurement-technique-for-programmers">What is a fair productivity measurement technique for programmers?</a></p>
+<p><a href="https://web.archive.org/web/20170810221051/https://stackoverflow.com/questions/446720/having-to-set-objectives-for-developers-even-though-objectives-dont-work">Having to set objectives for developers, even though objectives don't work</a></p>
+<p>Finally, author, enterprise architect and Head of Architecture at Cognizant, <a href="http://www.linkedin.com/in/alaninglis">Alan Inglis</a>, writes how <a href="https://web.archive.org/web/20160301152916/http://chiefarchitect.squarespace.com:80/management/2005/10/30/smart-objectives-considered-harmful.html">SMART Objectives are considered harmful</a>.  <a href="http://en.wikipedia.org/wiki/SMART_criteria">SMART Objectives</a> are a specific type of management by objective and an acronym that attempts to ensure that objectives are: <strong>S</strong>pecific, <strong>M</strong>easurable, <strong>A</strong>ttainable, <strong>R</strong>elevant and <strong>T</strong>imely:</p>
+<blockquote>
+<p>I feel the need to vent some frustration with the apparent obsession with something that I have finally come to conclude is a harmful activity that is best avoided.</p>
+</blockquote>
+<p>He talks about the M of SMART, measurability, and postulates:</p>
+<blockquote>
+<p>Measurable is supposed to be the most important consideration. This allows you and everyone else know that you've achieved your objective.
+But this creates a problem - not everything worth achieving is easily measurable.</p>
+</blockquote>
+<blockquote>
+<p>There are many tales of company activities being distorted by inappropriate measures. Staff changed their behaviour to reflect the measures that their performance was being judged by, &quot;to hell with customer service, I'm measured on how many calls I complete inside 2 minutes&quot;. The thing is that such measures seemed entirely reasonable when they were developed.</p>
+</blockquote>
+<p>He further supposes that, very often, an individuals' objectives that are being measured will often conflict and that this conflict often prevents the objectives from having an overall positive effect on the wider goals of the organisation:</p>
+<blockquote>
+<p>A complete set of objectives should be based on a strategy map i.e. a diagram showing the cause and effect relationships between the achievement of different objectives which ultimately result in the achievement of the financial objectives of the organisation. Without the understanding of cause and effect, the result is that objectives conflict and the individual's contribution to the overall performance does not improve.</p>
+</blockquote>
+<p>Inglis goes on to provide commentary on the other letters of the SMART acronym suggesting that the Achievable of SMART stifles innovation as it prevents the notion of &quot;going where angels fear to tread&quot;, a common tactic undertaken by many successful leaders and entrepreneurs who will undertake &quot;objectives&quot; without even knowing if they are achievable at the outset.  He suggests that the Specific of SMART will also stifle creativity and innovation, and that most organisations are simply far too dynamic with constant change to have sufficient time to nail down the exact specifics of any objective that is to be measured over time.  This inherent dynamism and change in most organisations will also often destroy any hope of adhering to the Timeliness of a SMART objective.</p>
+<p>Ultimately, Inglis concludes:</p>
+<blockquote>
+<p>SMART objectives create inertia and are an excuse for doing very little. They damage businesses by stifling creativity, swashing enthusiasm and making mediocrity acceptable. They are a crutch for poor managers.  If you want to improve your bottom line, recruit leaders, encourage leaders, give everyone the freedom to achieve.</p>
+</blockquote>
+
+  </article>
+
+  <script>
+    // Initial theme detection
+    const userPref = localStorage.getItem('theme');
+    const systemPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const theme = userPref || systemPref;
+
+    document.documentElement.setAttribute('data-theme', theme);
+    const toggle = document.getElementById('themeToggle');
+    toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+
+    toggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      toggle.textContent = next === 'dark' ? '☀️' : '🌙';
+      localStorage.setItem('theme', next);
+    });
+  </script>
+</body>
+</html>
