@@ -58,10 +58,12 @@ void Main()
 	var indexMarkdown = new StringBuilder();
 	indexMarkdown.AppendLine("# Articles");
 	
+	var pipeline = new MarkdownPipelineBuilder().UsePipeTables().Build();
+	
 	foreach(var file in files)
 	{
 		var markdown = File.ReadAllText(file);
-		var markdownHtml = Markdown.ToHtml(markdown);
+		var markdownHtml = Markdown.ToHtml(markdown, pipeline);
 		
 		var outputFileName = Path.GetFileNameWithoutExtension(file);
 		var outputFileNameWithExtension = outputFileName + ".html";
